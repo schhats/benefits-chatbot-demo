@@ -1,7 +1,7 @@
 # Frontend
 The frontend component of this demo, which consists of a GCS bucket that [hosts a static website](https://cloud.google.com/storage/docs/hosting-static-website) which contains an embedded [Dialogflow Messenger](https://cloud.google.com/dialogflow/cx/docs/concept/integration/dialogflow-messenger).
 
-![Frontend Architecture](assets/architecture.png)
+![Frontend Architecture](/assets/architecture.png)
 
 ## Deployment
 ### Pre-requisistes
