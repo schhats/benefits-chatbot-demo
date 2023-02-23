@@ -5,7 +5,7 @@ This demo serves as a deployable reference implementation of a chatbot developed
 ![Demo](../assets/va_benefits.jpg)
 
 ## Architecture
-![Demo Architecture](../assets/architecture.png)
+![Demo Architecture](/assets/architecture.png)
 The demo consists of the following components:
 * A [Cloud Run](https://cloud.google.com/run) service that hosts the backend APIs
 * An [Apigee X](https://cloud.google.com/apigee/docs/api-platform/get-started/what-apigee) instance that acts as the API Gateway to the Cloud Run service
