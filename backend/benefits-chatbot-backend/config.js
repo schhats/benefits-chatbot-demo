@@ -6,10 +6,18 @@ config.express.port = 8080;
 config.benefits = [
   'Medical',
   'Dental',
-  'Vision',
-  'Hospitalization',
-  'Surgery',
   'Mental Health',
+'VA Disability Compensation',
+'VA Loans',
+'Health Care',
+'Education and Training',
+'Veterans Readiness and Employment',
+'VetSuccess on Campus',
+'Dependents and Survivor Benefits',
+'VA Life Insurance',
+'VA Pension',
+'VA Burial Benefits',
+
 ];
 
 config.appointments = [
