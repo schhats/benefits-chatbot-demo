@@ -1,7 +1,7 @@
 # Dialogflow
 The Dialogflow virtual agent calling Apigee fulfillment APIs
 
- ![architecture-dialogflow](../../assets/architecture.png)
+ ![architecture-dialogflow](/assets/architecture.png)
 
 ## Deployment
 ### Pre-requisites
