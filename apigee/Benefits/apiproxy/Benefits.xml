@@ -1,0 +1,13 @@
+<APIProxy revision="2" name="Benefits">
+    <DisplayName>Benefits</DisplayName>
+    <Description>Proxy for benefits backend API</Description>
+    <CreatedAt>1677117543336</CreatedAt>
+    <LastModifiedAt>1677117543336</LastModifiedAt>
+    <BasePaths>/v1/benefits</BasePaths>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

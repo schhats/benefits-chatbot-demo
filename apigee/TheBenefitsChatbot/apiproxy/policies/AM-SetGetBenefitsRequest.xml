@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="AM-SetGetBenefitsRequest">
+    <AssignVariable>
+        <Name>the-benefits-chatbot.path</Name>
+        <Value>/</Value>
+    </AssignVariable>
+    <Remove>
+        <Payload>true</Payload>
+    </Remove>
+    <Set>
+        <Verb>GET</Verb>
+        <QueryParams>
+            <QueryParam name="city">{google.dialogflow.the-benefits-chatbot.session.parameters.city}</QueryParam>
+            <QueryParam name="date">{google.dialogflow.the-benefits-chatbot.session.parameters.date-string}</QueryParam>
+        </QueryParams>
+    </Set>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

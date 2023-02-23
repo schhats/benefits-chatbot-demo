@@ -1,0 +1,13 @@
+<APIProxy revision="2" name="Confirmations">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1677118007801</CreatedAt>
+    <LastModifiedAt>1677118007801</LastModifiedAt>
+    <BasePaths>/v1/confirmations</BasePaths>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

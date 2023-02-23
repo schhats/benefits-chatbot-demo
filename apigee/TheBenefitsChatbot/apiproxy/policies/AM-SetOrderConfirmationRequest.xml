@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage continueOnError="false" enabled="true" name="AM-SetOrderConfirmationRequest">
+    <AssignVariable>
+        <Name>the-benefits-chatbot.path</Name>
+        <Value>/</Value>
+    </AssignVariable>
+    <Remove>
+        <Payload>true</Payload>
+    </Remove>
+    <Set>
+        <Verb>POST</Verb>
+        <FormParams>
+            <FormParam name="showtime">{google.dialogflow.the-benefits-chatbot.session.parameters.appointment}</FormParam>
+            <FormParam name="movie">{google.dialogflow.the-benefits-chatbot.session.parameters.benefit}</FormParam>
+            <FormParam name="city">{google.dialogflow.the-benefits-chatbot.session.parameters.city}</FormParam>
+            <FormParam name="date">{google.dialogflow.the-benefits-chatbot.session.parameters.date-string}</FormParam>
+        </FormParams>
+    </Set>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

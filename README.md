@@ -2,7 +2,7 @@
 This demo serves as a deployable reference implementation of a chatbot developed using [Dialogflow CX](https://cloud.google.com/dialogflow/cx/docs/basics) and [Apigee](https://cloud.google.com/apigee/docs/api-platform/get-started/what-apigee)
 
 .gif of sample interaction with demo found below:
-![Demo](../assets/demo.gif)
+![Demo](../assets/va_benefits.jpg)
 
 ## Architecture
 ![Demo Architecture](../assets/architecture.png)

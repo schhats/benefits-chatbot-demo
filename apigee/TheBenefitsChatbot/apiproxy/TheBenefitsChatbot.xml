@@ -1,0 +1,35 @@
+<APIProxy revision="2" name="TheBenefitsChatbot">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1677122685278</CreatedAt>
+    <LastModifiedAt>1677122685278</LastModifiedAt>
+    <BasePaths>/v1/chatbots</BasePaths>
+    <Policies>
+        <Policy>JS-UpdateWebhookTagForCachePrefetch</Policy>
+        <Policy>ParseDialogflowRequest</Policy>
+        <Policy>ResponseCache</Policy>
+        <Policy>AM-DisablePathSuffixCopy</Policy>
+        <Policy>AM-SetGetBenefitsPrecacheRequest</Policy>
+        <Policy>AM-SetGetBenefitsRequest</Policy>
+        <Policy>AM-SetGetAppointmnetsRequest</Policy>
+        <Policy>AM-SetOrderConfirmationRequest</Policy>
+        <Policy>AM-SetValidateConfirmationRequest</Policy>
+        <Policy>SC-get-benefits-precache</Policy>
+        <Policy>SDR-get-benefits</Policy>
+        <Policy>SDR-get-benefits-precache</Policy>
+        <Policy>SDR-get-appointments</Policy>
+        <Policy>SDR-order-confirmation</Policy>
+        <Policy>SDR-validate-confirmation</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://updateWebhookTagForCachePrefetch.js</Resource>
+    </Resources>
+    <TargetEndpoints>
+        <TargetEndpoint>appointments</TargetEndpoint>
+        <TargetEndpoint>benefits</TargetEndpoint>
+        <TargetEndpoint>confirmations</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

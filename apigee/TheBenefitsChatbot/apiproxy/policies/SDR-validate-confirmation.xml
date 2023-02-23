@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SetDialogflowResponse continueOnError="false" enabled="true" name="SDR-validate-confirmation">
+    <DialogflowVersion>CX</DialogflowVersion>
+    <Source>message</Source>
+    <Parameters>
+        <Parameter name="validate-confirmation-response">
+            <JSONPath>$</JSONPath>
+        </Parameter>
+    </Parameters>
+</SetDialogflowResponse>

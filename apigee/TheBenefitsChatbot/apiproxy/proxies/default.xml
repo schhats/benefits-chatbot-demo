@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>ParseDialogflowRequest</Name>
+            </Step>
+            <Step>
+                <Condition>(google.dialogflow.the-benefits-chatbot.fulfillment.tag = "get-benefits")</Condition>
+                <Name>ResponseCache</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <Flows>
+        <Flow name="get-benefits">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>AM-SetGetBenefitsRequest</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>SDR-get-benefits</Name>
+                </Step>
+            </Response>
+            <Condition>(google.dialogflow.the-benefits-chatbot.fulfillment.tag = "get-benefits")</Condition>
+        </Flow>
+        <Flow name="get-benefits-cache-prefetch">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>AM-SetGetBenefitsPrecacheRequest</Name>
+                </Step>
+                <Step>
+                    <Name>JS-UpdateWebhookTagForCachePrefetch</Name>
+                </Step>
+                <Step>
+                    <Name>SC-get-benefits-precache</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>SDR-get-benefits-precache</Name>
+                </Step>
+            </Response>
+            <Condition>(google.dialogflow.the-benefits-chatbot.fulfillment.tag = "get-benefits-cache-prefetch")</Condition>
+        </Flow>
+        <Flow name="get-appointments">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>AM-SetGetAppointmnetsRequest</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>SDR-get-appointments</Name>
+                </Step>
+            </Response>
+            <Condition>(google.dialogflow.the-benefits-chatbot.fulfillment.tag = "get-appointments")</Condition>
+        </Flow>
+        <Flow name="order-confirmation">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>AM-SetOrderConfirmationRequest</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>SDR-order-confirmation</Name>
+                </Step>
+            </Response>
+            <Condition>(google.dialogflow.the-benefits-chatbot.fulfillment.tag = "order-confirmation")</Condition>
+        </Flow>
+        <Flow name="validate-confirmation">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>AM-SetValidateConfirmationRequest</Name>
+                </Step>
+            </Request>
+            <Response>
+                <Step>
+                    <Name>SDR-validate-confirmation</Name>
+                </Step>
+            </Response>
+            <Condition>(google.dialogflow.the-benefits-chatbot.fulfillment.tag = "validate-confirmation")</Condition>
+        </Flow>
+    </Flows>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <HTTPProxyConnection>
+        <BasePath>/v1/chatbots</BasePath>
+    </HTTPProxyConnection>
+    <RouteRule name="noroute">
+        <Condition>(google.dialogflow.the-benefits-chatbot.fulfillment.tag = "get-benefits-cache-prefetch")</Condition>
+    </RouteRule>
+    <RouteRule name="benefits">
+        <Condition>(google.dialogflow.the-benefits-chatbot.fulfillment.tag = "get-benefits")</Condition>
+        <TargetEndpoint>benefits</TargetEndpoint>
+    </RouteRule>
+    <RouteRule name="appointments">
+        <Condition>(google.dialogflow.the-benefits-chatbot.fulfillment.tag = "get-appointments")</Condition>
+        <TargetEndpoint>appointments</TargetEndpoint>
+    </RouteRule>
+    <RouteRule name="confirmations">
+        <Condition>(google.dialogflow.the-benefits-chatbot.fulfillment.tag = "validate-confirmation") or
+        (google.dialogflow.the-benefits-chatbot.fulfillment.tag = "order-confirmation")
+        </Condition>
+        <TargetEndpoint>confirmations</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

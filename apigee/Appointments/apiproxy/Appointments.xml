@@ -1,0 +1,13 @@
+<APIProxy revision="2" name="Appointments">
+    <DisplayName></DisplayName>
+    <Description></Description>
+    <CreatedAt>1677117734844</CreatedAt>
+    <LastModifiedAt>1677117734844</LastModifiedAt>
+    <BasePaths>/v1/appointments</BasePaths>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>
